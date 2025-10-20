@@ -1,6 +1,6 @@
-# Data Science Project Template 📊
+# JSONPlaceholder API Tutorial 📊
 
-Template completo para projetos de Data Science com backend, frontend e modelos de IA integrados.
+Tutorial completo para consumir APIs REST usando Python, demonstrando integração com JSONPlaceholder para operações GET e POST com manipulação de dados usando Pandas.
 
 ## 📋 Pré-requisitos
 
@@ -8,13 +8,21 @@ Template completo para projetos de Data Science com backend, frontend e modelos 
 - Git
 - Pipenv ou venv (para gerenciamento de dependências)
 
+## ✨ Tecnologias Utilizadas
+
+- **Python 3.12** - Linguagem principal
+- **Requests** - Biblioteca para requisições HTTP
+- **Pandas** - Manipulação e análise de dados
+- **JSONPlaceholder** - API REST fake para testes
+- **Ruff** - Linting e formatação de código
+
 ## 🔧 Instalação
 
 ### 1. Clone o repositório
 
 ```bash
-git clone <seu-repositorio>
-cd <nome-do-projeto>
+git clone https://github.com/Rhogger/json-placeholder-test.git
+cd json-placeholder-test
 ```
 
 ### 2. Configure o ambiente virtual
@@ -53,24 +61,46 @@ pip install -r requirements.txt
 ## 📁 Estrutura do Projeto
 
 ```text
-data-science-project/
-├── backend/                 # API e lógica de backend
-│   ├── src/                # Código fonte do backend
-│   └── README.md           # Documentação do backend
-├── frontend/               # Interface web
-│   ├── src/               # Código fonte do frontend
-│   └── README.md          # Documentação do frontend
-├── ia/                    # Modelos de IA e notebooks
-│   ├── src/              # Código fonte da IA
-│   └── README.md         # Documentação da IA
-├── .vscode/              # Configurações do VS Code
-├── .gitattributes        # Configuração para diffs do Git
-├── .gitignore            # Arquivos ignorados pelo Git
-├── Pipfile               # Dependências do projeto
-├── Pipfile.lock          # Lock das dependências
-├── requirements.txt      # Dependências (alternativa ao Pipfile)
-├── ruff.toml            # Configuração do Ruff
-└── README.md            # Este arquivo
+json-placeholder-test/
+├── backend/                 # Scripts de tutorial para APIs
+│   ├── src/                # Código fonte dos exemplos
+│   │   ├── api_data_extractor.py  # Tutorial GET com Pandas
+│   │   ├── api_post_creator.py    # Tutorial POST
+│   │   └── README.md       # Documentação dos exemplos
+├── .vscode/                # Configurações do VS Code
+├── .gitattributes          # Configuração para diffs do Git
+├── .gitignore              # Arquivos ignorados pelo Git
+├── Pipfile                 # Dependências do projeto
+├── Pipfile.lock            # Lock das dependências
+├── ruff.toml              # Configuração do Ruff
+├── DEV.md                 # Instruções de desenvolvimento
+└── README.md              # Este arquivo
+```
+
+## 🚀 Como Executar
+
+### 1. Tutorial de Extração de Dados (GET)
+
+Execute o script que demonstra como obter dados de usuários da API JSONPlaceholder:
+
+```bash
+# Com Pipenv
+pipenv run python backend/src/api_data_extractor.py
+
+# Com venv (após ativar)
+python backend/src/api_data_extractor.py
+```
+
+### 2. Tutorial de Criação de Posts (POST)
+
+Execute o script que demonstra como criar novos posts via API:
+
+```bash
+# Com Pipenv
+pipenv run python backend/src/api_post_creator.py
+
+# Com venv (após ativar)
+python backend/src/api_post_creator.py
 ```
 
 ## 👨‍💻 Desenvolvimento
@@ -79,21 +109,10 @@ Instruções para desenvolvimento estão [aqui](./DEV.md)
 
 ## 📚 Documentação Adicional
 
-- [Backend README](./backend/src/README.md) - Documentação específica do backend
-- [Frontend README](./frontend/src/README.md) - Documentação específica do frontend  
-- [IA README](./ia/src/README.md) - Documentação dos modelos e análises
+- [Backend README](./backend/src/README.md) - Documentação específica dos tutoriais
 
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
-## ✨ Tecnologias Base Incluídas
-
-- **Python 3.12** - Linguagem principal
-- **Pandas** - Manipulação de dados
-- **NumPy** - Computação científica
-- **Seaborn & Plotly** - Visualização de dados
-- **Streamlit** - Interface web
-- **Ruff** - Linting e formatação
 
 ---
